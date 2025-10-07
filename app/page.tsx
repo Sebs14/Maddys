@@ -1,7 +1,16 @@
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import OurWork from "./components/OurWork";
+
 export default function Home() {
   return (
     <div>
-      <h1 className='text-3xl font-bold underline'>Hello, world!</h1>
+      <Navbar />
+      {/* Main content container with proper spacing for fixed navbar */}
+      <main className="pt-16">
+        <Hero />
+        <OurWork />
+      </main>
     </div>
   );
 }
