@@ -1,27 +1,32 @@
-import React from "react";
-import CircularGallery from "./ui/CircularGallery";
-import { getProjectsFromPayload } from "@/lib/payload";
+"use client";
 
-const OurWork = async () => {
-  // Obtener datos de Payload (Pages, Media o fallback)
-  const items = await getProjectsFromPayload();
+import React from "react";
+import ProjectCarousel from "./ui/ProjectCarousel";
+import { projects } from "@/data/projects";
+
+const OurWork = () => {
+  // Convertir proyectos al formato que espera el carousel
+  const galleryItems = projects.map((project) => ({
+    image: project.image,
+    text: project.title,
+    slug: project.slug,
+  }));
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center flex-col space-y-4">
-      <h2 className="text-4xl font-bold">Mi Trabajo</h2>
-      <p className="text-center">
-        Aquí puedes ver algunos de mis proyectos destacados.
-      </p>
-      {/* Projects loaded from Payload CMS (Pages/Media) or fallback data */}
-      <div className=" h-[600px] w-screen relative">
-        <CircularGallery
-          items={items}
-          bend={5}
-          textColor="#000000"
-          borderRadius={0.05}
-          scrollEase={0.02}
-          font="bold 32px Inter, system-ui, sans-serif"
-        />
+    <div
+      id="projects"
+      className="min-h-screen flex items-center justify-center flex-col py-20 px-4 scroll-mt-16"
+    >
+      <div className="max-w-7xl w-full">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Mi Trabajo
+          </h2>
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+            Aquí puedes ver algunos de mis proyectos destacados.
+          </p>
+        </div>
+        <ProjectCarousel items={galleryItems} />
       </div>
     </div>
   );
