@@ -1,4 +1,4 @@
-import abstractImage from "@/app/assets/projects/abstract/abstract.webp";
+import janesWalk from "@/app/assets/projects/janeWalks/janesWalk.jpg";
 import caballoImage from "@/app/assets/projects/caballo/c.jpeg";
 import charlieImage from "@/app/assets/projects/charlie/charlie.jpeg";
 import floresImage from "@/app/assets/projects/flores/flowers.jpeg";
@@ -23,12 +23,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    slug: "abstract",
-    title: "Proyecto Abstract",
-    description: "Descripción del proyecto abstract",
-    image: abstractImage,
-    tags: ["Diseño", "Web"],
-    year: "2024",
+    slug: "janes-walk",
+    title: "Jane’s Walk Festival 2025 - Toronto, Canada",
+    description: "Jane’s Walk Festival 2025",
+    image: janesWalk,
+    tags: ["ILUSTRACIÓN"],
+    year: "",
   },
   {
     id: "2",

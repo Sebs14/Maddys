@@ -1,1 +1,19 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
 @import "tailwindcss";
+
+/* Utility classes for fonts using next/font variables */
+@layer utilities {
+  .font-sora {
+    font-family: var(--font-sora);
+  }
+  
+  .font-figtree {
+    font-family: var(--font-figtree);
+  }
+  
+  .font-big-shoulders {
+    font-family: "Big Shoulders Display", sans-serif;
+  }
+}

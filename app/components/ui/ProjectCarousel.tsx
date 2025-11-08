@@ -131,7 +131,7 @@ export default function ProjectCarousel({
             key={index}
             className="flex-none w-full snap-center px-4 md:px-8"
           >
-            <div className="w-full max-w-4xl mx-auto">
+            <div className="w-full max-w-5xl mx-auto">
               <div
                 className="relative group cursor-pointer"
                 onClick={() => handleProjectClick(item)}
@@ -144,7 +144,7 @@ export default function ProjectCarousel({
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     draggable={false}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1216px"
                     quality={95}
                   />
 
