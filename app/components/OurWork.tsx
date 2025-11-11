@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import ProjectCarousel from "./ui/ProjectCarousel";
 import { projects } from "@/data/projects";
 
@@ -26,7 +26,13 @@ const OurWork = () => {
             Aquí puedes ver algunos de mis proyectos destacados.
           </p>
         </div>
-        <ProjectCarousel items={galleryItems} />
+        <Suspense
+          fallback={
+            <div className="text-center py-20">Cargando proyectos...</div>
+          }
+        >
+          <ProjectCarousel items={galleryItems} />
+        </Suspense>
       </div>
     </div>
   );
