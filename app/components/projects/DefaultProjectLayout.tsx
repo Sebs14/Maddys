@@ -117,17 +117,52 @@ export default function DefaultProjectLayout({
       <footer className="border-t border-[#C2ECFF]/20 bg-[#022733]">
         <div className="container mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <p className="text-[#728A95] text-sm mb-2">Siguiente proyecto</p>
-              <h3 className="text-[#C2ECFF] text-2xl font-sora">
-                {nextProject.title}
-              </h3>
-            </div>
+            <Link href="/" className="group flex items-center">
+              <Image
+                src="/logo.PNG"
+                alt="Maddys Logo"
+                width={120}
+                height={30}
+                className="h-30 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </Link>
+            <Link
+              href="/"
+              className="group flex items-center font-figtree text-white "
+            >
+              <p className="transition-transform duration-300 group-hover:scale-105">
+                Instagram
+              </p>
+            </Link>
+            <Link
+              href="/"
+              className="group flex items-center font-figtree text-white"
+            >
+              <p className="transition-transform duration-300 group-hover:scale-105">
+                Behance
+              </p>
+            </Link>
+            <Link
+              href="/"
+              className="group flex items-center font-figtree text-white"
+            >
+              <p className="transition-transform duration-300 group-hover:scale-105">
+                Email
+              </p>
+            </Link>
+            <Link
+              href="/"
+              className="group flex items-center font-figtree text-white"
+            >
+              <p className="transition-transform duration-300 group-hover:scale-105">
+                Contacto
+              </p>
+            </Link>
             <Link
               href={`/projects/${nextProject.slug}`}
               className="group flex items-center gap-3 px-8 py-4 bg-[#C2ECFF] text-[#022733] rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105"
             >
-              <span>Ver proyecto</span>
+              <span>{nextProject.title}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +12,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <Link href="/" className="group flex items-center">
-            <img
+            <Image
               src="/logo.PNG"
               alt="Maddys Logo"
+              width={120}
+              height={30}
               className="h-30 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
