@@ -3,48 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Project, projects } from "@/data/projects";
-import mapImage from "@/app/assets/projects/janeWalks/map.jpg";
-import extra1 from "@/app/assets/projects/janeWalks/extra1.jpg";
-import extra2 from "@/app/assets/projects/janeWalks/extra2.jpg";
-import extra3 from "@/app/assets/projects/janeWalks/extra3.jpg";
-import extra4 from "@/app/assets/projects/janeWalks/extra4.jpg";
-import { useEffect, useRef } from "react";
+import stairs from "@/app/assets/projects/ConexionCultural/stairs.jpg";
+import extra1 from "@/app/assets/projects/ConexionCultural/extra1.jpg";
+import extra2 from "@/app/assets/projects/ConexionCultural/extra2.jpg";
+import extra3 from "@/app/assets/projects/ConexionCultural/extra3.jpg";
+import extra4 from "@/app/assets/projects/ConexionCultural/extra4.jpg";
 
-interface JanesWalkProjectLayoutProps {
+interface ConexionCulturalProjectProps {
   project: Project;
   slug: string;
 }
 
-export default function JanesWalkProjectLayout({
+export default function ConexionCulturalProject({
   project,
   slug,
-}: JanesWalkProjectLayoutProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play();
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // Se reproduce cuando el 50% del video es visible
-    );
-
-    observer.observe(video);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+}: ConexionCulturalProjectProps) {
   // Encontrar el siguiente proyecto
   const currentIndex = projects.findIndex((p) => p.slug === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
@@ -114,26 +87,24 @@ export default function JanesWalkProjectLayout({
         {/* Sección de contenido personalizable */}
         <section className="container mx-auto px-6 py-20">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl text-[#728A95] font-big-shoulders mb-8">
-              #WALK WITH US
+            <h2 className="text-5xl text-[#C2ECFF] font-big-shoulders mb-8">
+              IMAGEN REBRAND 2024
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6">
-                El Jane’s Walk Festival es un evento internacional que celebra
-                el legado de Jane Jacobs, una escritora y activista urbana
-                reconocida por su defensa de las comunidades locales y su visión
-                humana del urbanismo, esta edición es la de Toronto, Canada
-                2025. Mediante caminatas guiadas por ciudadanos, donde se
-                comparten experiencias y reflexiones sobre los barrios y la vida
-                urbana. <br />
-                <br />
-                Elaboré la imagen gráfica a través de ilustraciones, un proceso
-                que disfruté profundamente desde el inicio. Conocer la historia
-                y filosofía de Jane Jacobs me conmovió como artista, y me
-                inspiró a desarrollar una imagen que transmitiera su espíritu
-                curioso, cercano y observador. La ilustración que diseñé combina
-                dinamismo, diversidad y calidez humana, reflejando cómo las
-                personas dan vida a la ciudad en su cotidianidad.
+                “Conexión Cultural” presenta a El Salvador como un destino donde
+                los viajeros descubren lugares impresionantes, establecen
+                vínculos significativos con las comunidades locales a través de
+                experiencias auténticas y encuentros enriquecedores. Se resalta
+                la diversidad de paisajes, actividades y atracciones del país,
+                desde playas vírgenes hasta ricos patrimonios culturales,
+                creando un destino turístico completo y emocionante. <br />
+                <br /> El proyecto presenta un enfoque que mejora la experiencia
+                del turista. Este diseño busca adentrar a los visitantes en la
+                esencia de El Salvador desde el momento en que llegan,
+                transmitiendo los elementos importantes de la cultura del país e
+                invitándolos a explorar y conectar profundamente con la riqueza
+                cultural de su entorno.
               </p>
             </div>
           </div>
@@ -141,71 +112,69 @@ export default function JanesWalkProjectLayout({
 
         {/* Sección de galería adicional (ejemplo) */}
         <section className="flex flex-col gap-20 justify-center pb-10 items-center">
-          <Image
-            src={mapImage}
-            alt="Mapa del evento"
-            className="px-4 lg:p-0 rounded-[48px]"
-            quality={95}
-          />
+          <div className="relative w-full max-w-4xl mx-auto px-4 lg:p-0">
+            <Image
+              src={stairs}
+              alt="Mapa del evento"
+              className="w-full h-auto object-cover rounded-[48px]"
+              quality={95}
+              style={{
+                clipPath: "inset(0.1% 0.1% 0.1% 0.1% )",
+              }}
+            />
+          </div>
           <p className="text-xl text-center text-[#C2ECFF] font-figtree">
-            Jane Jacobs fue una activista urbana que promovió ciudades vivas,
-            diversas y pensadas para las personas. <br /> Esa esencia la quise
-            reflejar en las ilustraciones, dando vida a su espíritu en cada
-            elemento.
+            Al ser un diseño dedicado al área de turismo, se resaltaron los
+            elementos que caracterizan al país y con los
+            <br /> que es reconocido, jugando con las jerarquías visuales,
+            formas, tamaños y colores.
           </p>
         </section>
 
         <section className="md:container md:mx-auto md:px-6 md:py-20">
-          <div className="md:max-w-4xl md:mx-auto">
-            <video
-              ref={videoRef}
-              className="w-full md:rounded-[24px] md:shadow-lg"
-              preload="metadata"
-              loop
-              muted
-              playsInline
-            >
-              <source
-                src="/projects/janes-walk/characterVideo.mp4"
-                type="video/mp4"
-              />
-              Tu navegador no soporta el elemento de video.
-            </video>
-          </div>
+          <div className="md:max-w-4xl md:mx-auto"></div>
         </section>
-        <section className="container mx-auto px-4 md:px-6 py-10 md:py-20">
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden bg-white">
+        {/* Galería de imágenes */}
+        <section className="w-full px-4 md:px-6 py-10 md:py-20">
+          <div className="max-w-7xl mx-auto flex flex-col gap-4">
+            {/* Primera imagen - ancha arriba */}
+            <div className="relative w-full aspect-[21/9] rounded-[24px] overflow-hidden">
               <Image
                 src={extra1}
-                alt="evento jane's walks"
+                alt="Conexión Cultural diseño principal"
                 className="object-cover"
                 fill
                 quality={95}
               />
             </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
-              <Image
-                src={extra2}
-                alt="evento jane's walks"
-                className="object-cover"
-                fill
-                quality={95}
-              />
+
+            {/* Dos imágenes horizontales debajo - más altura */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden">
+                <Image
+                  src={extra2}
+                  alt="Conexión Cultural diseño 2"
+                  className="object-cover"
+                  fill
+                  quality={95}
+                />
+              </div>
+              <div className="relative w-full aspect-[4/3] rounded-[24px] overflow-hidden">
+                <Image
+                  src={extra3}
+                  alt="Conexión Cultural diseño 3"
+                  className="object-cover"
+                  fill
+                  quality={95}
+                />
+              </div>
             </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
-              <Image
-                src={extra3}
-                alt="evento jane's walks"
-                className="object-cover"
-                fill
-                quality={95}
-              />
-            </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
+
+            {/* Última imagen ancha - sin separación extra */}
+            <div className="relative w-full aspect-[21/9] rounded-[24px] overflow-hidden">
               <Image
                 src={extra4}
-                alt="evento jane's walks"
+                alt="Conexión Cultural banner final"
                 className="object-cover"
                 fill
                 quality={95}

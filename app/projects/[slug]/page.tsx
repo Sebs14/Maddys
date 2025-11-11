@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import DefaultProjectLayout from "@/app/components/projects/DefaultProjectLayout";
-import AbstractProjectLayout from "@/app/components/projects/AbstractProjectLayout";
 import JanesWalkProjectLayout from "@/app/components/projects/JanesWalkProjectLayout";
+import ConexionCulturalProject from "@/app/components/projects/ConexionCultural";
 
 interface ProjectPageProps {
   params: {
@@ -13,7 +13,7 @@ interface ProjectPageProps {
 // Mapeo de proyectos a sus layouts personalizados
 const projectLayouts = {
   "janes-walk": JanesWalkProjectLayout,
-  abstract: AbstractProjectLayout,
+  "conexionCultural": ConexionCulturalProject,
   // Agrega más proyectos con layouts personalizados aquí:
   // caballo: CaballoProjectLayout,
   // "mi-proyecto": MiProyectoLayout,
