@@ -3,6 +3,15 @@
 
 @import "tailwindcss";
 
+/* Custom Font */
+@font-face {
+  font-family: 'Dogurtlen';
+  src: url('/fonts/DogurtlenDemo-Wpadv.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Utility classes for fonts using next/font variables */
 @layer utilities {
   .font-sora {
@@ -15,5 +24,9 @@
   
   .font-big-shoulders {
     font-family: "Big Shoulders Display", sans-serif;
+  }
+  
+  .font-dogurtlen {
+    font-family: 'Dogurtlen', sans-serif;
   }
 }
