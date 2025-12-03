@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: '3',
     slug: 'melancolia-eminente',
-    title: 'Melancolía Inminente - Imaginario Simbólico',
+    title: 'Melancolía Eminente - Imaginario Simbólico',
     description: 'Proyecto personal sobre la melancolía',
     image: melancoliaEminente,
     tags: ['EDITORIAL'],
