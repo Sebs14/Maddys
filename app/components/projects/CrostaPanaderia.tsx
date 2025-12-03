@@ -4,21 +4,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Project, projects } from '@/data/projects';
 import Footer from '@/app/components/Footer';
-import stairs from '@/app/assets/projects/ConexionCultural/stairs.jpg';
-import extra1 from '@/app/assets/projects/ConexionCultural/extra1.jpg';
-import extra2 from '@/app/assets/projects/ConexionCultural/extra2.jpg';
-import extra3 from '@/app/assets/projects/ConexionCultural/extra3.jpg';
-import extra4 from '@/app/assets/projects/ConexionCultural/extra4.jpg';
+import panaderia from '@/app/assets/projects/CrostaPanaderia/panaderia.jpg';
+import extra1 from '@/app/assets/projects/CrostaPanaderia/extra1.jpg';
+import extra2 from '@/app/assets/projects/CrostaPanaderia/extra2.jpg';
+import extra3 from '@/app/assets/projects/CrostaPanaderia/extra3.jpg';
+import extra4 from '@/app/assets/projects/CrostaPanaderia/extra4.jpg';
 
-interface ConexionCulturalProjectProps {
+interface CrostaPanaderiaProjectProps {
   project: Project;
   slug: string;
 }
 
-export default function ConexionCulturalProject({
+export default function CrostaPanaderiaProject({
   project,
   slug,
-}: ConexionCulturalProjectProps) {
+}: CrostaPanaderiaProjectProps) {
   // Encontrar el siguiente proyecto
   const currentIndex = projects.findIndex((p) => p.slug === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
@@ -89,23 +89,19 @@ export default function ConexionCulturalProject({
         <section className='container mx-auto px-6 py-20'>
           <div className='max-w-4xl mx-auto'>
             <h2 className='text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
-              IMAGEN REBRAND 2024
+              CROSTA - Desde el Alma, de lo artesanal & Gourmet
             </h2>
             <div className='prose prose-lg max-w-none'>
               <p className='text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6'>
-                “Conexión Cultural” presenta a El Salvador como un destino donde
-                los viajeros descubren lugares impresionantes, establecen
-                vínculos significativos con las comunidades locales a través de
-                experiencias auténticas y encuentros enriquecedores. Se resalta
-                la diversidad de paisajes, actividades y atracciones del país,
-                desde playas vírgenes hasta ricos patrimonios culturales,
-                creando un destino turístico completo y emocionante. <br />
-                <br /> El proyecto presenta un enfoque que mejora la experiencia
-                del turista. Este diseño busca adentrar a los visitantes en la
-                esencia de El Salvador desde el momento en que llegan,
-                transmitiendo los elementos importantes de la cultura del país e
-                invitándolos a explorar y conectar profundamente con la riqueza
-                cultural de su entorno.
+                Una propuesta innovadora en Suchitoto, enfocada en panadería y
+                repostería orgánica con énfasis en masa madre y fermentaciones
+                naturales. Su concepto combina técnicas artesanales con un
+                enfoque gourmet, diferenciándose de la oferta actual en la zona.{' '}
+                <br /> <br />
+                El proposito de la identidad visual busca transmitir esta
+                identidad a través de una estética con lo artesanal, natural y
+                sofisticado, utilizando formas y colores inspirados en la
+                tierra, los granos y el proceso de horneado.
               </p>
             </div>
           </div>
@@ -115,7 +111,7 @@ export default function ConexionCulturalProject({
         <section className='flex flex-col gap-20 justify-center pb-10 items-center'>
           <div className='relative w-full max-w-4xl mx-auto px-4 lg:p-0'>
             <Image
-              src={stairs}
+              src={panaderia}
               alt='Mapa del evento'
               className='w-full h-auto object-cover rounded-[48px]'
               quality={95}
@@ -124,11 +120,12 @@ export default function ConexionCulturalProject({
               }}
             />
           </div>
-          <p className='text-xl text-center text-[#C2ECFF] font-figtree'>
-            Al ser un diseño dedicado al área de turismo, se resaltaron los
-            elementos que caracterizan al país y con los
-            <br /> que es reconocido, jugando con las jerarquías visuales,
-            formas, tamaños y colores.
+          <p className='text-xl text-justify text-[#C2ECFF] font-figtree'>
+            Se inició con una profunda investigación sobre los poemas de Alfredo
+            Espino, explorando sus metáforas y <br /> simbolismos para conectar
+            sus emociones con elementos visuales. Las ilustraciones, realizadas
+            con un estilo <br /> libre y expresivo, para capturar texturas
+            orgánicas y transmitir la calidez de los paisajes cuzcatlecos.
           </p>
         </section>
 
@@ -150,36 +147,37 @@ export default function ConexionCulturalProject({
             </div>
 
             {/* Dos imágenes horizontales debajo - más altura */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <div className='relative w-full aspect-[4/3] rounded-[24px] overflow-hidden'>
-                <Image
-                  src={extra2}
-                  alt='Conexión Cultural diseño 2'
-                  className='object-cover'
-                  fill
-                  quality={95}
-                />
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+              <div className='flex flex-col gap-4'>
+                <div className='relative w-full aspect-square rounded-[24px] overflow-hidden'>
+                  <Image
+                    src={extra2}
+                    alt='Conexión Cultural diseño 2'
+                    className='object-cover scale-105'
+                    fill
+                    quality={95}
+                  />
+                </div>
+                <div className='relative w-full aspect-square rounded-[24px] overflow-hidden'>
+                  <Image
+                    src={extra3}
+                    alt='Conexión Cultural diseño 3'
+                    className='object-cover scale-105'
+                    fill
+                    quality={95}
+                  />
+                </div>
               </div>
-              <div className='relative w-full aspect-[4/3] rounded-[24px] overflow-hidden'>
-                <Image
-                  src={extra3}
-                  alt='Conexión Cultural diseño 3'
-                  className='object-cover'
-                  fill
-                  quality={95}
-                />
-              </div>
-            </div>
 
-            {/* Última imagen ancha - sin separación extra */}
-            <div className='relative w-full aspect-[21/9] rounded-[24px] overflow-hidden'>
-              <Image
-                src={extra4}
-                alt='Conexión Cultural banner final'
-                className='object-cover'
-                fill
-                quality={95}
-              />
+              <div className='relative w-full h-full aspect-[9/16] rounded-[24px] overflow-hidden'>
+                <Image
+                  src={extra4}
+                  alt='Conexión Cultural banner final'
+                  className='object-cover'
+                  fill
+                  quality={95}
+                />
+              </div>
             </div>
           </div>
         </section>

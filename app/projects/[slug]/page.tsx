@@ -4,6 +4,7 @@ import DefaultProjectLayout from '@/app/components/projects/DefaultProjectLayout
 import JanesWalkProjectLayout from '@/app/components/projects/JanesWalkProjectLayout';
 import ConexionCulturalProject from '@/app/components/projects/ConexionCultural';
 import MelancoliaEminenteProject from '@/app/components/projects/MelancoliaEminente';
+import CrostaPanaderiaProject from '@/app/components/projects/CrostaPanaderia';
 
 interface ProjectPageProps {
   params: {
@@ -16,9 +17,7 @@ const projectLayouts = {
   'janes-walk': JanesWalkProjectLayout,
   'conexionCultural': ConexionCulturalProject,
   'melancolia-eminente': MelancoliaEminenteProject,
-  // Agrega más proyectos con layouts personalizados aquí:
-  // caballo: CaballoProjectLayout,
-  // "mi-proyecto": MiProyectoLayout,
+  'crostaPanaderia': CrostaPanaderiaProject,
 } as const;
 
 type ProjectLayoutKey = keyof typeof projectLayouts;
@@ -42,7 +41,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   // Si existe un layout personalizado, usarlo
   if (CustomLayout) {
-    return <CustomLayout project={project} slug={params.slug} />;
+    return (
+    <>
+      <CustomLayout project={project} slug={params.slug} />
+    </>
+    );
   }
 
   // Si no, usar el layout por defecto
