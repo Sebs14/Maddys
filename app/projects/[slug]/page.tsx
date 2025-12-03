@@ -1,8 +1,9 @@
-import { notFound } from "next/navigation";
-import { projects } from "@/data/projects";
-import DefaultProjectLayout from "@/app/components/projects/DefaultProjectLayout";
-import JanesWalkProjectLayout from "@/app/components/projects/JanesWalkProjectLayout";
-import ConexionCulturalProject from "@/app/components/projects/ConexionCultural";
+import { notFound } from 'next/navigation';
+import { projects } from '@/data/projects';
+import DefaultProjectLayout from '@/app/components/projects/DefaultProjectLayout';
+import JanesWalkProjectLayout from '@/app/components/projects/JanesWalkProjectLayout';
+import ConexionCulturalProject from '@/app/components/projects/ConexionCultural';
+import MelancoliaEminenteProject from '@/app/components/projects/MelancoliaEminente';
 
 interface ProjectPageProps {
   params: {
@@ -12,8 +13,9 @@ interface ProjectPageProps {
 
 // Mapeo de proyectos a sus layouts personalizados
 const projectLayouts = {
-  "janes-walk": JanesWalkProjectLayout,
-  "conexionCultural": ConexionCulturalProject,
+  'janes-walk': JanesWalkProjectLayout,
+  'conexionCultural': ConexionCulturalProject,
+  'melancolia-eminente': MelancoliaEminenteProject,
   // Agrega más proyectos con layouts personalizados aquí:
   // caballo: CaballoProjectLayout,
   // "mi-proyecto": MiProyectoLayout,

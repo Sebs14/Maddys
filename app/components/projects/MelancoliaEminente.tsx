@@ -3,21 +3,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Project, projects } from '@/data/projects';
-import stairs from '@/app/assets/projects/ConexionCultural/stairs.jpg';
-import extra1 from '@/app/assets/projects/ConexionCultural/extra1.jpg';
-import extra2 from '@/app/assets/projects/ConexionCultural/extra2.jpg';
-import extra3 from '@/app/assets/projects/ConexionCultural/extra3.jpg';
-import extra4 from '@/app/assets/projects/ConexionCultural/extra4.jpg';
+import book from '@/app/assets/projects/MelancoliaEminente/book.jpg';
+import extra1 from '@/app/assets/projects/MelancoliaEminente/extra1.jpg';
+import extra2 from '@/app/assets/projects/MelancoliaEminente/extra2.jpg';
+import extra3 from '@/app/assets/projects/MelancoliaEminente/extra3.jpg';
+import extra4 from '@/app/assets/projects/MelancoliaEminente/extra4.jpg';
 
-interface ConexionCulturalProjectProps {
+interface MelancoliaEminenteProjectProps {
   project: Project;
   slug: string;
 }
 
-export default function ConexionCulturalProject({
+export default function MelancoliaEminenteProject({
   project,
   slug,
-}: ConexionCulturalProjectProps) {
+}: MelancoliaEminenteProjectProps) {
   // Encontrar el siguiente proyecto
   const currentIndex = projects.findIndex((p) => p.slug === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
@@ -88,25 +88,26 @@ export default function ConexionCulturalProject({
         <section className='container mx-auto px-6 py-20'>
           <div className='max-w-4xl mx-auto'>
             <h2 className='text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
-              IMAGEN REBRAND 2024
+              MELANCOLÍA EMINENTE
             </h2>
             <div className='prose prose-lg max-w-none'>
               <p className='text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6'>
-                “Conexión Cultural” presenta a El Salvador como un destino donde
-                los viajeros descubren lugares impresionantes, establecen
-                vínculos significativos con las comunidades locales a través de
-                experiencias auténticas y encuentros enriquecedores. Se resalta
-                la diversidad de paisajes, actividades y atracciones del país,
-                desde playas vírgenes hasta ricos patrimonios culturales,
-                creando un destino turístico completo y emocionante. <br />
-                <br /> El proyecto presenta un enfoque que mejora la experiencia
-                del turista. Este diseño busca adentrar a los visitantes en la
-                esencia de El Salvador desde el momento en que llegan,
-                transmitiendo los elementos importantes de la cultura del país e
-                invitándolos a explorar y conectar profundamente con la riqueza
-                cultural de su entorno.
+                Melancolía Eminente es un Imaginario Simbólico de ilustraciones
+                inspirado en ‘‘Jícaras Tristes’’ de Alfredo Espino, que traduce
+                la euforia y melancolía de sus poemas en un imaginario simbólico
+                conectado con la belleza de las colinas cuzcatlecas. <br />
+                <br />
+                Este desafío implicó transformar palabras en imágenes que
+                transmitieran además del significado literal de los poemas,
+                también la calidez, dulzura y nostalgia que irradian en cada
+                brisa y flor, manteniendo la esencia poética en cada ilustración
               </p>
             </div>
+            <p className=' font-figtree text-start text-[#C2ECFF] italic'>
+              En colaboración con: <br /> Grecia Romero: Diseño de
+              conceptualización <br />
+              Apoyo en Ilustraciones y elementos tipográficos.
+            </p>
           </div>
         </section>
 
@@ -114,7 +115,7 @@ export default function ConexionCulturalProject({
         <section className='flex flex-col gap-20 justify-center pb-10 items-center'>
           <div className='relative w-full max-w-4xl mx-auto px-4 lg:p-0'>
             <Image
-              src={stairs}
+              src={book}
               alt='Mapa del evento'
               className='w-full h-auto object-cover rounded-[48px]'
               quality={95}
@@ -123,11 +124,12 @@ export default function ConexionCulturalProject({
               }}
             />
           </div>
-          <p className='text-xl text-center text-[#C2ECFF] font-figtree'>
-            Al ser un diseño dedicado al área de turismo, se resaltaron los
-            elementos que caracterizan al país y con los
-            <br /> que es reconocido, jugando con las jerarquías visuales,
-            formas, tamaños y colores.
+          <p className='text-xl text-justify text-[#C2ECFF] font-figtree'>
+            Se inició con una profunda investigación sobre los poemas de Alfredo
+            Espino, explorando sus metáforas y <br /> simbolismos para conectar
+            sus emociones con elementos visuales. Las ilustraciones, realizadas
+            con un estilo <br /> libre y expresivo, para capturar texturas
+            orgánicas y transmitir la calidez de los paisajes cuzcatlecos.
           </p>
         </section>
 
@@ -149,36 +151,37 @@ export default function ConexionCulturalProject({
             </div>
 
             {/* Dos imágenes horizontales debajo - más altura */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <div className='relative w-full aspect-[4/3] rounded-[24px] overflow-hidden'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+              <div className='flex flex-col gap-4'>
+                <div className='relative w-full aspect-[4/3] rounded-[24px] overflow-hidden'>
+                  <Image
+                    src={extra2}
+                    alt='Conexión Cultural diseño 2'
+                    className='object-cover'
+                    fill
+                    quality={95}
+                  />
+                </div>
+                <div className='relative w-full aspect-[3/4] rounded-[24px] overflow-hidden'>
+                  <Image
+                    src={extra3}
+                    alt='Conexión Cultural diseño 3'
+                    className='object-cover'
+                    fill
+                    quality={95}
+                  />
+                </div>
+              </div>
+              {/* Última imagen ancha - sin separación extra */}
+              <div className='relative w-full h-full aspect-[9/16] rounded-[24px] overflow-hidden'>
                 <Image
-                  src={extra2}
-                  alt='Conexión Cultural diseño 2'
+                  src={extra4}
+                  alt='Conexión Cultural banner final'
                   className='object-cover'
                   fill
                   quality={95}
                 />
               </div>
-              <div className='relative w-full aspect-[4/3] rounded-[24px] overflow-hidden'>
-                <Image
-                  src={extra3}
-                  alt='Conexión Cultural diseño 3'
-                  className='object-cover'
-                  fill
-                  quality={95}
-                />
-              </div>
-            </div>
-
-            {/* Última imagen ancha - sin separación extra */}
-            <div className='relative w-full aspect-[21/9] rounded-[24px] overflow-hidden'>
-              <Image
-                src={extra4}
-                alt='Conexión Cultural banner final'
-                className='object-cover'
-                fill
-                quality={95}
-              />
             </div>
           </div>
         </section>
