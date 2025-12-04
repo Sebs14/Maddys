@@ -180,7 +180,7 @@ export default function MelancoliaEminenteProject({
                 <Image
                   src={extra4}
                   alt="Conexión Cultural banner final"
-                  className="object-cover"
+                  className="object-cover object-[55%_center]"
                   fill
                   quality={95}
                 />

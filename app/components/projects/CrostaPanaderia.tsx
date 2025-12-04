@@ -175,7 +175,7 @@ export default function CrostaPanaderiaProject({
               <div className="relative w-full h-full aspect-[9/16] rounded-[24px] overflow-hidden">
                 <Image
                   src={extra4}
-                  alt="Conexión Cultural banner final"
+                  alt="Crosta 4"
                   className="object-cover"
                   fill
                   quality={95}

@@ -164,7 +164,7 @@ export default function ConexionCulturalProject({
                 <Image
                   src={extra3}
                   alt="Conexión Cultural diseño 3"
-                  className="object-cover"
+                  className="object-cover scale-130"
                   fill
                   quality={95}
                 />

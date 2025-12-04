@@ -141,7 +141,15 @@ export default function ProjectCarousel({
                   <Image
                     src={item.image}
                     alt={item.text}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                    className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 ${
+                      item.slug === "melancolia-eminente"
+                        ? "object-[13%_center] md:object-center"
+                        : ""
+                    } ${
+                      item.slug === "crostaPanaderia"
+                        ? "object-[25%_center] md:object-center"
+                        : ""
+                    }`}
                     draggable={false}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1216px"
