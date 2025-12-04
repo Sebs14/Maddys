@@ -86,13 +86,13 @@ export default function ConexionCulturalProject({
         </section>
 
         {/* Sección de contenido personalizable */}
-        <section className='container mx-auto px-6 py-20'>
+        <section className='container mx-auto px-6 py-10 md:py-20'>
           <div className='max-w-4xl mx-auto'>
-            <h2 className='text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
+            <h2 className='text-2xl md:text-4xl lg:text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
               IMAGEN REBRAND 2024
             </h2>
             <div className='prose prose-lg max-w-none'>
-              <p className='text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6'>
+              <p className='text-[#C2ECFF] text-start font-figtree text-base md:text-lg lg:text-xl leading-relaxed mb-6'>
                 “Conexión Cultural” presenta a El Salvador como un destino donde
                 los viajeros descubren lugares impresionantes, establecen
                 vínculos significativos con las comunidades locales a través de
@@ -124,10 +124,10 @@ export default function ConexionCulturalProject({
               }}
             />
           </div>
-          <p className='text-xl text-center text-[#C2ECFF] font-figtree'>
+          <p className='text-base md:text-lg lg:text-xl text-center text-[#C2ECFF] font-figtree px-4 md:px-0'>
             Al ser un diseño dedicado al área de turismo, se resaltaron los
             elementos que caracterizan al país y con los
-            <br /> que es reconocido, jugando con las jerarquías visuales,
+            <br className='hidden lg:inline' /> que es reconocido, jugando con las jerarquías visuales,
             formas, tamaños y colores.
           </p>
         </section>

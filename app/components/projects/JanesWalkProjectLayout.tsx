@@ -113,13 +113,13 @@ export default function JanesWalkProjectLayout({
         </section>
 
         {/* Sección de contenido personalizable */}
-        <section className='container mx-auto px-6 py-20'>
+        <section className='container mx-auto px-6 py-10 md:py-20'>
           <div className='max-w-4xl mx-auto'>
-            <h2 className='text-5xl text-[#728A95] font-big-shoulders mb-8'>
+            <h2 className='text-2xl md:text-4xl lg:text-5xl text-[#728A95] font-big-shoulders mb-8'>
               #WALK WITH US
             </h2>
             <div className='prose prose-lg max-w-none'>
-              <p className='text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6'>
+              <p className='text-[#C2ECFF] text-start font-figtree text-base md:text-lg lg:text-xl leading-relaxed mb-6'>
                 El Jane’s Walk Festival es un evento internacional que celebra
                 el legado de Jane Jacobs, una escritora y activista urbana
                 reconocida por su defensa de las comunidades locales y su visión
@@ -148,9 +148,9 @@ export default function JanesWalkProjectLayout({
             className='px-4 lg:p-0 rounded-[48px]'
             quality={95}
           />
-          <p className='text-xl text-center text-[#C2ECFF] font-figtree'>
+          <p className='text-base md:text-lg lg:text-xl text-center text-[#C2ECFF] font-figtree px-4 md:px-0'>
             Jane Jacobs fue una activista urbana que promovió ciudades vivas,
-            diversas y pensadas para las personas. <br /> Esa esencia la quise
+            diversas y pensadas para las personas. <br className='hidden lg:inline' /> Esa esencia la quise
             reflejar en las ilustraciones, dando vida a su espíritu en cada
             elemento.
           </p>

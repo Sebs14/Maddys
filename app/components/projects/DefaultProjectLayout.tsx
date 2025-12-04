@@ -59,10 +59,10 @@ export default function DefaultProjectLayout({
                 </span>
               ))}
             </div>
-            <h1 className='text-5xl lg:text-7xl font-bold mb-6'>
+            <h1 className='text-3xl md:text-5xl lg:text-7xl font-bold mb-6'>
               {project.title}
             </h1>
-            <p className='text-xl text-gray-600 leading-relaxed'>
+            <p className='text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed'>
               {project.description}
             </p>
           </div>
@@ -82,16 +82,16 @@ export default function DefaultProjectLayout({
         </section>
 
         {/* Sección de contenido personalizable */}
-        <section className='container mx-auto px-6 py-20'>
+        <section className='container mx-auto px-6 py-10 md:py-20'>
           <div className='max-w-4xl mx-auto'>
-            <h2 className='text-3xl font-bold mb-8'>Sobre el proyecto</h2>
+            <h2 className='text-xl md:text-2xl lg:text-3xl font-bold mb-8'>Sobre el proyecto</h2>
             <div className='prose prose-lg max-w-none'>
-              <p className='text-gray-700 leading-relaxed mb-6'>
+              <p className='text-gray-700 text-base md:text-lg leading-relaxed mb-6'>
                 Aquí puedes agregar más contenido sobre este proyecto
                 específico. Cada página de proyecto puede tener un diseño
                 completamente diferente.
               </p>
-              <p className='text-gray-700 leading-relaxed'>
+              <p className='text-gray-700 text-base md:text-lg leading-relaxed'>
                 Puedes agregar más secciones, imágenes, videos, o cualquier
                 contenido que necesites para mostrar tu trabajo de la mejor
                 manera.
@@ -103,7 +103,7 @@ export default function DefaultProjectLayout({
         {/* Sección de galería adicional (ejemplo) */}
         <section className='bg-gray-50 py-20'>
           <div className='container mx-auto px-6'>
-            <h2 className='text-3xl font-bold mb-12 text-center'>
+            <h2 className='text-xl md:text-2xl lg:text-3xl font-bold mb-12 text-center'>
               Más imágenes
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto'>

@@ -86,13 +86,13 @@ export default function MelancoliaEminenteProject({
         </section>
 
         {/* Sección de contenido personalizable */}
-        <section className='container mx-auto px-6 py-20'>
+        <section className='container mx-auto px-6 py-10 md:py-20'>
           <div className='max-w-4xl mx-auto'>
-            <h2 className='text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
+            <h2 className='text-2xl md:text-4xl lg:text-5xl text-[#C2ECFF] font-big-shoulders mb-8'>
               MELANCOLÍA EMINENTE
             </h2>
             <div className='prose prose-lg max-w-none'>
-              <p className='text-[#C2ECFF] text-start font-figtree text-xl leading-relaxed mb-6'>
+              <p className='text-[#C2ECFF] text-start font-figtree text-base md:text-lg lg:text-xl leading-relaxed mb-6'>
                 Melancolía Eminente es un Imaginario Simbólico de ilustraciones
                 inspirado en ‘‘Jícaras Tristes’’ de Alfredo Espino, que traduce
                 la euforia y melancolía de sus poemas en un imaginario simbólico
@@ -104,7 +104,7 @@ export default function MelancoliaEminenteProject({
                 brisa y flor, manteniendo la esencia poética en cada ilustración
               </p>
             </div>
-            <p className=' font-figtree text-start text-[#C2ECFF] italic'>
+            <p className='font-figtree text-sm md:text-base text-start text-[#C2ECFF] italic'>
               En colaboración con: <br /> Grecia Romero: Diseño de
               conceptualización <br />
               Apoyo en Ilustraciones y elementos tipográficos.
@@ -125,11 +125,11 @@ export default function MelancoliaEminenteProject({
               }}
             />
           </div>
-          <p className='text-xl text-justify text-[#C2ECFF] font-figtree'>
+          <p className='text-base md:text-lg lg:text-xl text-center lg:text-justify text-[#C2ECFF] font-figtree px-4 md:px-0'>
             Se inició con una profunda investigación sobre los poemas de Alfredo
-            Espino, explorando sus metáforas y <br /> simbolismos para conectar
+            Espino, explorando sus metáforas y <br className='hidden lg:inline' /> simbolismos para conectar
             sus emociones con elementos visuales. Las ilustraciones, realizadas
-            con un estilo <br /> libre y expresivo, para capturar texturas
+            con un estilo <br className='hidden lg:inline' /> libre y expresivo, para capturar texturas
             orgánicas y transmitir la calidez de los paisajes cuzcatlecos.
           </p>
         </section>
