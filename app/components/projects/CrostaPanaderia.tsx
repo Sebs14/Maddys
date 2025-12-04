@@ -122,11 +122,12 @@ export default function CrostaPanaderiaProject({
           </div>
           <p className="text-base md:text-lg lg:text-xl text-center lg:text-justify text-[#C2ECFF] font-figtree px-4 md:px-0">
             La estructura del símbolo utiliza formas redondeadas y texturas
-            sutiles inspiradas en la superficie de una <br className="hidden lg:inline" /> baguette (uno de
-            los panes principales de la marca) y en la irregularidad propia de
-            lo artesanal. Esta identidad <br className="hidden lg:inline" /> visual transmite calidez,
-            autenticidad y sentido de lugar, destacándose en Suchitoto al
-            ofrecer una <br className="hidden lg:inline" />
+            sutiles inspiradas en la superficie de una{" "}
+            <br className="hidden lg:inline" /> baguette (uno de los panes
+            principales de la marca) y en la irregularidad propia de lo
+            artesanal. Esta identidad <br className="hidden lg:inline" /> visual
+            transmite calidez, autenticidad y sentido de lugar, destacándose en
+            Suchitoto al ofrecer una <br className="hidden lg:inline" />
             experiencia gastronómica artesanal con un toque gourmet.
           </p>
         </section>
