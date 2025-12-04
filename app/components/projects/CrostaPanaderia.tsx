@@ -77,7 +77,7 @@ export default function CrostaPanaderiaProject({
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[20%_center] md:object-center"
             fill
             priority
             sizes="100vw"

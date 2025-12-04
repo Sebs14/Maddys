@@ -77,7 +77,7 @@ export default function MelancoliaEminenteProject({
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-[13%_center]"
+            className="w-full h-full object-cover object-[13%_center] md:object-center"
             fill
             priority
             sizes="100vw"
