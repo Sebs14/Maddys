@@ -174,8 +174,8 @@ export default function JanesWalkProjectLayout({
             </video>
           </div>
         </section>
-        <section className="container mx-auto px-4 md:px-6 pb-20">
-          <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <section className="container mx-auto px-4 md:px-6 py-10 md:py-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
             <div className="relative w-full aspect-square rounded-[24px] md:rounded-[48px] overflow-hidden bg-[#022733]">
               <Image
                 src={extra1}
