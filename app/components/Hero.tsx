@@ -11,7 +11,7 @@ import eyes from "@/app/assets/hero/eye.jpg";
 // Row 2 & 3 images
 import bird2 from "@/app/assets/hero/bird2.jpg";
 import bird3 from "@/app/assets/hero/bird3.jpg";
-import bird4 from "@/app/assets/hero/bird4.png";
+import bird4 from "@/app/assets/hero/bird4.jpg";
 import flame from "@/app/assets/hero/flame.jpg";
 
 const Hero = () => {

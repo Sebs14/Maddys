@@ -145,8 +145,8 @@ export default function JanesWalkProjectLayout({
           <Image
             src={mapImage}
             alt="Mapa del evento"
-            className="px-4 lg:p-0 rounded-[48px]"
-            quality={95}
+            className="px-4 lg:p-0 "
+            quality={100}
           />
           <p className="text-base md:text-lg lg:text-xl text-center text-[#C2ECFF] font-figtree px-4 md:px-0">
             Jane Jacobs fue una activista urbana que promovió ciudades vivas,
@@ -175,17 +175,17 @@ export default function JanesWalkProjectLayout({
           </div>
         </section>
         <section className="container mx-auto px-4 md:px-6 pb-20">
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden bg-white">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
+            <div className="relative w-full aspect-square rounded-[24px] md:rounded-[48px] overflow-hidden bg-[#022733]">
               <Image
                 src={extra1}
                 alt="evento jane's walks"
-                className="object-cover"
+                className="object-cover scale-135"
                 fill
                 quality={95}
               />
             </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
+            <div className="relative w-full aspect-square rounded-[24px] md:rounded-[48px] overflow-hidden">
               <Image
                 src={extra2}
                 alt="evento jane's walks"
@@ -194,7 +194,7 @@ export default function JanesWalkProjectLayout({
                 quality={95}
               />
             </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
+            <div className="relative w-full aspect-square rounded-[24px] md:rounded-[48px] overflow-hidden">
               <Image
                 src={extra3}
                 alt="evento jane's walks"
@@ -203,7 +203,7 @@ export default function JanesWalkProjectLayout({
                 quality={95}
               />
             </div>
-            <div className="relative w-full aspect-square rounded-[48px] overflow-hidden">
+            <div className="relative w-full aspect-square rounded-[24px] md:rounded-[48px] overflow-hidden">
               <Image
                 src={extra4}
                 alt="evento jane's walks"
