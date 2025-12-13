@@ -12,13 +12,9 @@ interface ProjectItem {
 
 interface ProjectCarouselProps {
   items: ProjectItem[];
-  initialSlug?: string;
 }
 
-export default function ProjectCarousel({
-  items,
-  initialSlug,
-}: ProjectCarouselProps) {
+export default function ProjectCarousel({ items }: ProjectCarouselProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const scrollRef = useRef<HTMLDivElement>(null);
