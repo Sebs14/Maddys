@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import MakeIdeasHappen from "./components/MakeIdeasHappen";
 import Navbar from "./components/Navbar";
 import OurWork from "./components/OurWork";
 
@@ -9,6 +10,7 @@ export default function Home() {
       {/* Main content container with proper spacing for fixed navbar */}
       <main className="pt-16">
         <Hero />
+        <MakeIdeasHappen />
         <OurWork />
       </main>
     </div>
