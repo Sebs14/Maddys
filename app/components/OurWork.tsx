@@ -15,11 +15,11 @@ const OurWork = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen text-white flex items-center justify-center flex-col py-20 px-4 scroll-mt-16 bg-[#002939]"
+      className="min-h-screen flex items-center justify-center flex-col py-20 px-4 scroll-mt-16 bg-[#002939]"
     >
       <div className="max-w-7xl w-full">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-big-shoulders mb-4">
+          <h2 className="text-4xl text-white md:text-5xl lg:text-6xl font-bold font-big-shoulders mb-4">
             MI TRABAJO
           </h2>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-figtree">
