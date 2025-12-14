@@ -1,3 +1,4 @@
+import AboutMe from "./components/AboutMe";
 import Hero from "./components/Hero";
 import MakeIdeasHappen from "./components/MakeIdeasHappen";
 import Navbar from "./components/Navbar";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <MakeIdeasHappen />
         <OurWork />
+        <AboutMe />
       </main>
     </div>
   );

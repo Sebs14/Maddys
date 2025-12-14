@@ -12,6 +12,13 @@
   font-display: swap;
 }
 
+/*
+  custom colors:
+*/
+:root {
+  --color-bg: #002939;
+}
+
 /* Utility classes for fonts using next/font variables */
 @layer utilities {
   .font-sora {
