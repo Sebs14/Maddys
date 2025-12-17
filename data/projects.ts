@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
   {
     id: "6",
-    slug: "fufurufa",
+    slug: "Fufurufa",
     title: "FUFURUFA - VAIZA EL SALVADOR",
     description: "",
     image: fufurufa,
