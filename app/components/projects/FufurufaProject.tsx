@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project, projects } from "@/data/projects";
 import Footer from "@/app/components/Footer";
-import ticket from "../../assets/projects/Fufurufa/ticket.jpg";
-import extra1 from "../../assets/projects/Fufurufa/extra1.jpg";
-import extra2 from "../../assets/projects/Fufurufa/extra2.jpg";
-import extra3 from "../../assets/projects/Fufurufa/extra3.jpg";
+import ticket from "@/app/assets/projects/Fufurufa/ticket.jpg";
+import extra1 from "@/app/assets/projects/Fufurufa/extra1.jpg";
+import extra2 from "@/app/assets/projects/Fufurufa/extra2.jpg";
+import extra3 from "@/app/assets/projects/Fufurufa/extra3.jpg";
 
 interface FufurufaProjectProps {
   project: Project;

@@ -23,6 +23,25 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [hasScrolledToInitial, setHasScrolledToInitial] = useState(false);
+  const [isAutoHovered, setIsAutoHovered] = useState(false);
+
+  // Auto-play del carrusel
+  useEffect(() => {
+    const autoPlayInterval = setInterval(() => {
+      setActiveIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % items.length;
+        scrollToIndex(nextIndex);
+
+        // Activar el efecto hover automático por 3 segundos
+        setIsAutoHovered(true);
+        setTimeout(() => setIsAutoHovered(false), 3000);
+
+        return nextIndex;
+      });
+    }, 5000); // Cambia cada 5 segundos
+
+    return () => clearInterval(autoPlayInterval);
+  }, [items.length]);
 
   // Scrollear al proyecto inicial si viene de la URL
   useEffect(() => {
@@ -129,7 +148,9 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
           >
             <div className="w-full max-w-5xl mx-auto">
               <div
-                className="relative group cursor-pointer"
+                className={`relative group cursor-pointer ${
+                  isAutoHovered ? "auto-hovered" : ""
+                }`}
                 onClick={() => handleProjectClick(item)}
               >
                 {/* Contenedor de imagen sin sombra externa */}
@@ -138,6 +159,8 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
                     src={item.image}
                     alt={item.text}
                     className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 ${
+                      isAutoHovered && index === activeIndex ? "scale-110" : ""
+                    } ${
                       item.slug === "melancolia-eminente"
                         ? "object-[13%_center] md:object-center"
                         : ""
@@ -153,13 +176,31 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
                   />
 
                   {/* Sombra interna sutil */}
-                  <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div
+                    className={`absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${
+                      isAutoHovered && index === activeIndex
+                        ? "opacity-100"
+                        : ""
+                    }`}
+                  />
 
                   {/* Overlay con gradiente */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                      isAutoHovered && index === activeIndex
+                        ? "opacity-100"
+                        : ""
+                    }`}
+                  />
 
                   {/* Texto del overlay */}
-                  <div className="absolute inset-0 flex items-end justify-center p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                  <div
+                    className={`absolute inset-0 flex items-end justify-center p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 ${
+                      isAutoHovered && index === activeIndex
+                        ? "opacity-100 translate-y-0"
+                        : ""
+                    }`}
+                  >
                     <div className="text-center">
                       <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">
                         {item.text}
@@ -173,7 +214,7 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
 
                 {/* Título siempre visible en móvil */}
                 <div className="mt-4 text-center md:hidden">
-                  <h3 className="text-xl font-bold">{item.text}</h3>
+                  <h3 className="text-xl font-bold text-white">{item.text}</h3>
                 </div>
               </div>
             </div>
