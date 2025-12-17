@@ -5,6 +5,7 @@ import JanesWalkProjectLayout from '@/app/components/projects/JanesWalkProjectLa
 import ConexionCulturalProject from '@/app/components/projects/ConexionCultural';
 import MelancoliaEminenteProject from '@/app/components/projects/MelancoliaEminente';
 import CrostaPanaderiaProject from '@/app/components/projects/CrostaPanaderia';
+import ReMadridGraficaProject from '@/app/components/projects/ReMadridGrafica';
 
 interface ProjectPageProps {
   params: {
@@ -18,6 +19,7 @@ const projectLayouts = {
   'conexionCultural': ConexionCulturalProject,
   'melancolia-eminente': MelancoliaEminenteProject,
   'crostaPanaderia': CrostaPanaderiaProject,
+  'ReMadridGrafica': ReMadridGraficaProject,
 } as const;
 
 type ProjectLayoutKey = keyof typeof projectLayouts;

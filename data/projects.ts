@@ -2,6 +2,8 @@ import janesWalk from '@/app/assets/projects/janeWalks/janesWalk.jpg';
 import conexionCultural from '@/app/assets/projects/ConexionCultural/ConexionCultural.jpg';
 import melancoliaEminente from '@/app/assets/projects/MelancoliaEminente/melancoliaEminente.jpg';
 import crostaPanaderia from '@/app/assets/projects/CrostaPanaderia/crostaPanaderia.jpg';
+import reMadrid from '@/app/assets/projects/ReMadrid/reMadrid.jpg';
+import fufurufa from '@/app/assets/projects/Fufurufa/fufurufa.jpg';
 import { StaticImageData } from 'next/image';
 
 export interface Project {
@@ -16,35 +18,51 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: '1',
-    slug: 'janes-walk',
-    title: 'Jane’s Walk Festival 2025 - Toronto, Canada',
-    description: 'Jane’s Walk Festival 2025',
+    id: "1",
+    slug: "janes-walk",
+    title: "Jane’s Walk Festival 2025 - Toronto, Canada",
+    description: "Jane’s Walk Festival 2025",
     image: janesWalk,
-    tags: ['ILUSTRACIÓN'],
+    tags: ["ILUSTRACIÓN"],
   },
   {
-    id: '2',
-    slug: 'conexionCultural',
-    title: 'Conexión Cultural - REBRAND 2024',
-    description: 'Rebranding para Conexión Cultural',
+    id: "2",
+    slug: "conexionCultural",
+    title: "Conexión Cultural - REBRAND 2024",
+    description: "Rebranding para Conexión Cultural",
     image: conexionCultural,
-    tags: ['ILUSTRACIÓN'],
+    tags: ["ILUSTRACIÓN"],
   },
   {
-    id: '3',
-    slug: 'melancolia-eminente',
-    title: 'Melancolía Eminente - Imaginario Simbólico',
-    description: 'Proyecto personal sobre la melancolía',
+    id: "3",
+    slug: "melancolia-eminente",
+    title: "Melancolía Eminente - Imaginario Simbólico",
+    description: "Proyecto personal sobre la melancolía",
     image: melancoliaEminente,
-    tags: ['EDITORIAL'],
+    tags: ["EDITORIAL"],
   },
   {
-    id: '4',
-    slug: 'crostaPanaderia',
-    title: 'CROSTA - Panadería',
-    description: '',
+    id: "4",
+    slug: "crostaPanaderia",
+    title: "CROSTA - Panadería",
+    description: "",
     image: crostaPanaderia,
-    tags: ['IDENTIDAD VISUAL'],
+    tags: ["IDENTIDAD VISUAL"],
+  },
+  {
+    id: "5",
+    slug: "ReMadridGrafica",
+    title: "Re_ Madrid Gráfica 2021",
+    description: "",
+    image: reMadrid,
+    tags: ["ILUSTRACIÓN"],
+  },
+  {
+    id: "6",
+    slug: "fufurufa",
+    title: "FUFURUFA - VAIZA EL SALVADOR",
+    description: "",
+    image: fufurufa,
+    tags: ["ILUSTRACIÓN"],
   },
 ];
