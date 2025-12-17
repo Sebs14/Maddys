@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project, projects } from "@/data/projects";
 import Footer from "@/app/components/Footer";
-import ticket from "@/app/assets/projects/Fufurufa/ticket.jpg";
-import extra1 from "@/app/assets/projects/Fufurufa/extra1.jpg";
-import extra2 from "@/app/assets/projects/Fufurufa/extra2.jpg";
-import extra3 from "@/app/assets/projects/Fufurufa/extra3.jpg";
+import ticket from "../../assets/projects/Fufurufa/ticket.jpg";
+import extra1 from "../../assets/projects/Fufurufa/extra1.jpg";
+import extra2 from "../../assets/projects/Fufurufa/extra2.jpg";
+import extra3 from "../../assets/projects/Fufurufa/extra3.jpg";
 
 interface FufurufaProjectProps {
   project: Project;
@@ -116,8 +116,8 @@ export default function FufurufaProject({
           </div>
           <p className="text-base md:text-lg lg:text-xl text-center lg:text-justify text-[#C2ECFF] font-figtree px-4 md:px-0">
             Dentro de la estampilla se representa una mesa compartida, donde
-            manos con accesorios sostienen copas, <br /> aludiendo a la reunión, la
-            complicidad y los rituales sociales informales que dan vida a la
+            manos con accesorios sostienen copas, <br /> aludiendo a la reunión,
+            la complicidad y los rituales sociales informales que dan vida a la
             palabra. 
           </p>
         </section>
