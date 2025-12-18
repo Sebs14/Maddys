@@ -131,7 +131,7 @@ const GetToKnowMe = () => {
               : "opacity-0 translate-y-10"
           }`}
         >
-          Algunas marcas con las que trabajado
+          Algunas marcas con las que he trabajado
         </p>
 
         {/* Logos con animación fade-in */}
