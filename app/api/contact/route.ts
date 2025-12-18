@@ -100,7 +100,7 @@ ${message}
     return NextResponse.json(
       {
         error: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
-        details: error.message,
+        details: err.message,
       },
       { status: 500 }
     );
