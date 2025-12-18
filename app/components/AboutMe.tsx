@@ -8,19 +8,23 @@ const AboutMe = () => {
   return (
     <div
       id="about"
-      className="h-screen w-full relative bg-[#d0fce3] flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+      className="min-h-screen w-full relative bg-[#d0fce3] flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-0"
     >
       <div className="w-full absolute left-0 -ml-40 sm:-ml-60 md:-ml-80 hidden sm:flex">
         <Lanyard position={[0, 0, 10]} gravity={[0, -40, 0]} />
       </div>
-      <div className="w-full pt-8 sm:hidden flex justify-center">
-        <Image src={carnet} alt="Carnet" className="w-3/4 max-w-xs h-auto" />
+      <div className="w-full pt-4 sm:hidden flex justify-center">
+        <Image
+          src={carnet}
+          alt="Carnet"
+          className="w-2/3 max-w-[250px] h-auto"
+        />
       </div>
-      <div className="flex flex-col gap-4 items-center justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto sm:h-full overflow-visible sm:absolute top-0 right-0 sm:ml-auto bg-transparent px-4 pb-8 sm:pb-0">
-        <h2 className="font-big-shoulders mt-4 sm:mt-20 text-5xl sm:text-7xl uppercase ">
+      <div className="flex flex-col gap-3 sm:gap-4 items-center justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto sm:h-full overflow-visible sm:absolute top-0 right-0 sm:ml-auto bg-transparent px-4 pb-6 sm:pb-0">
+        <h2 className="font-big-shoulders mt-2 sm:mt-20 text-4xl sm:text-7xl uppercase leading-tight">
           Para mí diseñar es observar desde otras alturas.
         </h2>
-        <p className="font-figtree text-2xl">
+        <p className="font-figtree text-lg sm:text-2xl">
           Diseñadora multifacética que percibe el diseño como un acto de
           observación y expansión creativa. Con excelente habilidad entre lo
           manual y digital
@@ -28,7 +32,7 @@ const AboutMe = () => {
         <div className="w-full flex items-start">
           <Link
             href="/getToKnowMe"
-            className="mt-6 bg-[#EF7A30] rounded-4xl px-10 py-3 text-white font-bold text-lg hover:bg-[#d96c1f] transition-colors duration-300"
+            className="mt-3 sm:mt-6 bg-[#EF7A30] rounded-4xl px-8 sm:px-10 py-2 sm:py-3 text-white font-bold text-base sm:text-lg hover:bg-[#d96c1f] transition-colors duration-300"
           >
             Get to know me
             <svg
