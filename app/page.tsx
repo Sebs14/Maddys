@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import MakeIdeasHappen from "./components/MakeIdeasHappen";
@@ -15,6 +16,7 @@ export default function Home() {
         <MakeIdeasHappen />
         <OurWork />
         <AboutMe />
+        <ContactForm />
         <Footer />
       </main>
     </div>
