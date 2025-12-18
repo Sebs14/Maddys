@@ -3,6 +3,7 @@
 import React, { Suspense } from "react";
 import ProjectCarousel from "./ui/ProjectCarousel";
 import { projects } from "@/data/projects";
+import { useTranslations } from "next-intl";
 
 const OurWork = () => {
   // Convertir proyectos al formato que espera el carousel
@@ -12,6 +13,9 @@ const OurWork = () => {
     slug: project.slug,
   }));
 
+  const t = useTranslations('ourWork');
+  
+
   return (
     <div
       id="projects"
@@ -20,10 +24,10 @@ const OurWork = () => {
       <div className="max-w-7xl w-full">
         <div className="text-center mb-12">
           <h2 className="text-4xl text-white md:text-5xl lg:text-6xl font-bold font-big-shoulders mb-4">
-            MI TRABAJO
+            {t('title').toUpperCase()}
           </h2>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-figtree">
-            Aquí puedes ver algunos de mis proyectos destacados.
+            {t('subtitle')}
           </p>
         </div>
         <Suspense

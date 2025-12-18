@@ -3,8 +3,12 @@ import Lanyard from "../../components/Lanyard";
 import Link from "next/link";
 import Image from "next/image";
 import carnet from "../assets/aboutMe/carnet.png";
+import { useLocale, useTranslations } from "next-intl";
 
 const AboutMe = () => {
+  const t = useTranslations("aboutMe");
+  const locale = useLocale();
+  
   return (
     <div
       id="about"
@@ -22,16 +26,14 @@ const AboutMe = () => {
       </div>
       <div className="flex flex-col gap-3 sm:gap-4 items-center justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto sm:h-full overflow-visible sm:absolute top-0 right-0 sm:ml-auto bg-transparent px-4 pb-6 sm:pb-0">
         <h2 className="font-big-shoulders mt-2 sm:mt-20 text-4xl sm:text-7xl uppercase leading-tight">
-          Para mí diseñar es observar desde otras alturas.
+          {t("title")}
         </h2>
         <p className="font-figtree text-lg sm:text-2xl">
-          Diseñadora multifacética que percibe el diseño como un acto de
-          observación y expansión creativa. Con excelente habilidad entre lo
-          manual y digital
+          {t("subtitle")}
         </p>
         <div className="w-full flex items-start">
           <Link
-            href="/getToKnowMe"
+            href={locale === "es" ? "/es/getToKnowMe" : "/en/getToKnowMe"}
             className="mt-3 sm:mt-6 bg-[#EF7A30] rounded-4xl px-8 sm:px-10 py-2 sm:py-3 text-white font-bold text-base sm:text-lg hover:bg-[#d96c1f] transition-colors duration-300"
           >
             Get to know me

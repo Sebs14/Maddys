@@ -7,7 +7,8 @@ import heyIm from "@/app/assets/aboutMe/heyImM.svg";
 import logos from "@/app/assets/aboutMe/logos.png";
 import draw from "@/app/assets/aboutMe/draw.png";
 import Footer from "@/app/components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "@/app/components/Navbar";
+import { useLocale, useTranslations } from "next-intl";
 
 const GetToKnowMe = () => {
   const [visibleElements, setVisibleElements] = useState({
@@ -24,6 +25,8 @@ const GetToKnowMe = () => {
   const brandsRef = useRef<HTMLParagraphElement>(null);
   const logosRef = useRef<HTMLDivElement>(null);
   const drawRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("getToKnowMe");
+  const locale = useLocale();
 
   useEffect(() => {
     const observerOptions = {
@@ -114,12 +117,7 @@ const GetToKnowMe = () => {
               : "opacity-0 translate-y-10"
           }`}
         >
-          Desde pequeña descubrí el arte como un lenguaje que captó mi atención
-          y despertó mi curiosidad. Ese primer acercamiento me llevó más
-          adelante al diseño, y en lugar de elegir entre uno u otro, decidí
-          integrarlos. Hoy baso mi trabajo en esa fusión, creando proyectos con
-          propósito, esencia y vida, donde la expresión artística convive con la
-          funcionalidad del diseño.
+          {t("subtitle1")}
         </p>
 
         {/* Título de marcas con animación */}
@@ -131,7 +129,7 @@ const GetToKnowMe = () => {
               : "opacity-0 translate-y-10"
           }`}
         >
-          Algunas marcas con las que he trabajado
+          {t("brandings")}
         </p>
 
         {/* Logos con animación fade-in */}

@@ -1,0 +1,52 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "work": "Trabajo",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Maddy",
+    "subtitle": "Diseñadora Gráfica & Creativa",
+    "description": "Transformo ideas en experiencias visuales memorables. Especializada en diseño de marca, diseño editorial y dirección creativa.",
+    "cta": "Ver mi trabajo"
+  },
+  "makeIdeasHappen": {
+    "title": "Hagamos que tus ideas cobren vida",
+    "subtitle": "Diseño con propósito",
+    "description": "Cada proyecto es una oportunidad para crear algo significativo y único."
+  },
+  "ourWork": {
+    "title": "Mi Trabajo",
+    "subtitle": "Aquí puedes ver algunos de mis proyectos destacados.",
+    "viewProject": "Ver proyecto"
+  },
+  "aboutMe": {
+    "title": "Para mí diseñar es observar desde otras alturas.",
+    "subtitle": "Diseñadora multifacética que percibe el diseño como un acto de observación y expansión creativa. Con excelente habilidad entre lo manual y digital"
+  },
+  "getToKnowMe": {
+    "subtitle1":"Desde pequeña descubrí el arte como un lenguaje que captó mi atención y despertó mi curiosidad. Ese primer acercamiento me llevó más adelante al diseño, y en lugar de elegir entre uno u otro, decidí integrarlos. Hoy baso mi trabajo en esa fusión, creando proyectos con propósito, esencia y vida, donde la expresión artística convive con la funcionalidad del diseño.",
+    "brandings":"Algunas marcas con las que he trabajado"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Cuéntame sobre tu proyecto",
+    "name": "Tu nombre",
+    "email": "tu@email.com",
+    "message": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado correctamente! Te responderé pronto.",
+    "error": "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "social": "Sígueme en redes"
+  },
+  "projects": {
+    "viewMore": "Ver más",
+    "backToWork": "Volver al trabajo"
+  }
+}

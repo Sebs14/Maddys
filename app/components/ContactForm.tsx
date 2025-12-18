@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 const ContactForm = () => {
+  const t = useTranslations("contact");
+  const locale = useLocale();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,7 +33,7 @@ const ContactForm = () => {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`/${locale}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

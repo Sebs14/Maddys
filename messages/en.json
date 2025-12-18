@@ -1,0 +1,52 @@
+{
+  "navbar": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Maddy",
+    "subtitle": "Graphic Designer & Creative",
+    "description": "I transform ideas into memorable visual experiences. Specialized in brand design, editorial design, and creative direction.",
+    "cta": "View my work"
+  },
+  "makeIdeasHappen": {
+    "title": "Let's make your ideas come to life",
+    "subtitle": "Design with purpose",
+    "description": "Every project is an opportunity to create something meaningful and unique."
+  },
+  "ourWork": {
+    "title": "My Work",
+    "subtitle": "Here you can see some of my featured projects.",
+    "viewProject": "View project"
+  },
+  "aboutMe": {
+    "title": "For me, designing is about seeing from different heights.",
+    "subtitle": " A multifaceted designer who views design as an act of observation and creative expansion. With excellent skills between manual and digital"
+  },
+    "getToKnowMe": {
+        "subtitle1":"Since I was a child, I discovered art as a language that captured my attention and sparked my curiosity. That first approach later led me to design, and instead of choosing between one or the other, I decided to integrate them. Today, I base my work on that fusion, creating projects with purpose, essence, and life, where artistic expression coexists with the functionality of design.",
+        "brandings":"Some brands I've worked with"
+    },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Have a project in mind?",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "social": "Follow me on social media"
+  },
+  "projects": {
+    "viewMore": "View more",
+    "backToWork": "Back to work"
+  }
+}
