@@ -37,6 +37,13 @@ const Navbar = () => {
               Proyectos
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link
+              href="/#contact"
+              className="relative text-white hover:text-gray-200 font-medium text-sm transition-colors duration-200 group"
+            >
+              Contacto
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300"></span>
+            </Link>
             {/* <Link
               href="#skills"
               className="relative text-white hover:text-gray-200 font-medium text-sm transition-colors duration-200 group"
@@ -104,6 +111,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Proyectos
+            </Link>
+            <Link
+              href="#contact"
+              className="block text-white hover:text-gray-200 font-medium py-2 px-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contacto
             </Link>
             {/* <Link
               href="#skills"

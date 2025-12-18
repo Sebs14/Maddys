@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Project } from '@/data/projects';
+import Link from "next/link";
+import Image from "next/image";
+import { Project } from "@/data/projects";
 
 interface FooterProps {
   nextProject?: Project;
@@ -39,7 +39,7 @@ export default function Footer({ nextProject }: FooterProps) {
             </p>
           </Link>
           <Link
-            href="/"
+            href="/#contact"
             className="group flex items-center font-figtree text-white"
           >
             <p className="transition-transform duration-300 group-hover:scale-105">
