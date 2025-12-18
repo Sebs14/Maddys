@@ -46,15 +46,17 @@ const Hero = () => {
         </div>
 
         {/* Row 3: ILUSTRATION (maddy continues) */}
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF7B32]">
-          <span className="font-bold text-4xl tracking-wide font-dogurtlen text-[#F1EBDF]">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF7B32] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#8BC9AA] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-4xl tracking-wide font-dogurtlen text-[#F1EBDF] relative z-10">
             ILUSTRATION
           </span>
         </div>
 
         {/* Row 4: VISUAL IDENTITY + Flame */}
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#F1EBDF]">
-          <span className="font-bold text-4xl font tracking-wide font-dogurtlen text-[#022733] text-center leading-8 ">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#F1EBDF] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#EF9BBC] -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-4xl font tracking-wide font-dogurtlen text-[#022733] group-hover:text-[#F1EBDF] text-center leading-8 relative z-10 transition-colors duration-700">
             VISUAL
             <br />
             IDENTITY
@@ -80,8 +82,9 @@ const Hero = () => {
             sizes="50vw"
           />
         </div>
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF9BBC]">
-          <span className="font-bold text-4xl  tracking-wide font-dogurtlen text-[#F1EBDF] text-center">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF9BBC] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#EF7B32] -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-4xl  tracking-wide font-dogurtlen text-[#F1EBDF] group-hover:text-[#022733] text-center relative z-10 transition-colors duration-700">
             EDITORIAL
           </span>
         </div>
@@ -149,8 +152,9 @@ const Hero = () => {
         <div className="col-span-1 row-span-1 bg-[#F1EBDF]" />
 
         {/* Orange with ILUSTRATION text */}
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF7B32]">
-          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#F1EBDF]">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF7B32] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#8BC9AA] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#F1EBDF] relative z-10">
             ILUSTRATION
           </span>
         </div>
@@ -170,8 +174,9 @@ const Hero = () => {
         <div className="hidden lg:block col-span-1 row-span-1 bg-[#022733]" />
 
         {/* Pink with EDITORIAL text */}
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF9BBC]">
-          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#F1EBDF] text-center">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#EF9BBC] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#F1EBDF] -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#F1EBDF] group-hover:text-[#022733] text-center relative z-10 transition-colors duration-700">
             EDITORIAL
           </span>
         </div>
@@ -203,8 +208,9 @@ const Hero = () => {
         <div className="col-span-1 row-span-1 bg-[#8BC9AA]" />
 
         {/* Cream with VISUAL IDENTITY text */}
-        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#F1EBDF]">
-          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#022733] text-center leading-10 ">
+        <div className="col-span-1 row-span-1 flex items-center justify-center bg-[#F1EBDF] cursor-pointer relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[#022733] -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out" />
+          <span className="font-bold text-3xl lg:text-5xl tracking-wide font-dogurtlen text-[#022733] group-hover:text-[#F1EBDF] text-center leading-10 relative z-10 transition-colors duration-700">
             VISUAL
             <br />
             IDENTITY
