@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image, { StaticImageData } from "next/image";
+import { useTranslations } from "next-intl";
 
 interface ProjectItem {
   image: StaticImageData;
@@ -24,24 +25,28 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hasScrolledToInitial, setHasScrolledToInitial] = useState(false);
   const [isAutoHovered, setIsAutoHovered] = useState(false);
+  const [isUserHovering, setIsUserHovering] = useState(false);
 
   // Auto-play del carrusel
   useEffect(() => {
     const autoPlayInterval = setInterval(() => {
-      setActiveIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % items.length;
-        scrollToIndex(nextIndex);
+      // Solo auto-avanzar si el usuario NO está haciendo hover
+      if (!isUserHovering) {
+        setActiveIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % items.length;
+          scrollToIndex(nextIndex);
 
-        // Activar el efecto hover automático por 3 segundos
-        setIsAutoHovered(true);
-        setTimeout(() => setIsAutoHovered(false), 3000);
+          // Activar el efecto hover automático por 3 segundos
+          setIsAutoHovered(true);
+          setTimeout(() => setIsAutoHovered(false), 3000);
 
-        return nextIndex;
-      });
+          return nextIndex;
+        });
+      }
     }, 5000); // Cambia cada 5 segundos
 
     return () => clearInterval(autoPlayInterval);
-  }, [items.length]);
+  }, [items.length, isUserHovering]);
 
   // Scrollear al proyecto inicial si viene de la URL
   useEffect(() => {
@@ -152,6 +157,8 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
                   isAutoHovered ? "auto-hovered" : ""
                 }`}
                 onClick={() => handleProjectClick(item)}
+                onMouseEnter={() => setIsUserHovering(true)}
+                onMouseLeave={() => setIsUserHovering(false)}
               >
                 {/* Contenedor de imagen sin sombra externa */}
                 <div className="aspect-[4/5] md:aspect-[3/4] lg:aspect-video w-full overflow-hidden rounded-2xl bg-gray-100 relative">
