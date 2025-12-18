@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const AboutMe = () => {
   return (
-    <div className="h-screen w-full relative bg-[#d0fce3] flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+    <div
+      id="about"
+      className="h-screen w-full relative bg-[#d0fce3] flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+    >
       <div className="w-full absolute left-0 -ml-40 sm:-ml-60 md:-ml-80 hidden sm:flex">
         <Lanyard position={[0, 0, 10]} gravity={[0, -40, 0]} />
       </div>
@@ -19,10 +22,10 @@ const AboutMe = () => {
         </p>
         <div className="w-full flex items-start">
           <Link
-            href="/about"
+            href="/getToKnowMe"
             className="mt-6 bg-[#EF7A30] rounded-4xl px-10 py-3 text-white font-bold text-lg hover:bg-[#d96c1f] transition-colors duration-300"
           >
-            Elevemos tus ideas <span></span>
+            Get to know me
             <svg
               className="inline-block ml-2"
               width="40"
