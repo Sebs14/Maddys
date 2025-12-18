@@ -1,18 +1,23 @@
 import React from "react";
 import Lanyard from "../../components/Lanyard";
 import Link from "next/link";
+import Image from "next/image";
+import carnet from "../assets/aboutMe/carnet.png";
 
 const AboutMe = () => {
   return (
     <div
       id="about"
-      className="h-screen w-full relative bg-[#d0fce3] flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
+      className="h-screen w-full relative bg-[#d0fce3] flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20"
     >
       <div className="w-full absolute left-0 -ml-40 sm:-ml-60 md:-ml-80 hidden sm:flex">
         <Lanyard position={[0, 0, 10]} gravity={[0, -40, 0]} />
       </div>
-      <div className="flex flex-col gap-4 items-center justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-full overflow-visible absolute top-0 right-0 sm:relative sm:ml-auto bg-transparent px-4">
-        <h2 className="font-big-shoulders mt-20 text-7xl uppercase ">
+      <div className="w-full pt-8 sm:hidden flex justify-center">
+        <Image src={carnet} alt="Carnet" className="w-3/4 max-w-xs h-auto" />
+      </div>
+      <div className="flex flex-col gap-4 items-center justify-center w-full sm:w-3/4 md:w-2/3 lg:w-1/2 h-auto sm:h-full overflow-visible sm:absolute top-0 right-0 sm:ml-auto bg-transparent px-4 pb-8 sm:pb-0">
+        <h2 className="font-big-shoulders mt-4 sm:mt-20 text-5xl sm:text-7xl uppercase ">
           Para mí diseñar es observar desde otras alturas.
         </h2>
         <p className="font-figtree text-2xl">
