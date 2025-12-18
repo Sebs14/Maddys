@@ -90,11 +90,12 @@ ${message}
       { message: "Email enviado correctamente" },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error;
     console.error("Error detallado al enviar email:");
-    console.error("Nombre:", error.name);
-    console.error("Mensaje:", error.message);
-    console.error("Stack:", error.stack);
+    console.error("Nombre:", err.name);
+    console.error("Mensaje:", err.message);
+    console.error("Stack:", err.stack);
 
     return NextResponse.json(
       {

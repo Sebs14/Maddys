@@ -49,7 +49,7 @@ const ContactForm = () => {
       } else {
         throw new Error(data.error || "Error al enviar el mensaje");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message:
